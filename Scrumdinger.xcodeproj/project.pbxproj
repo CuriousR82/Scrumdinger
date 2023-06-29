@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB6052012A4D056B0002909B /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6052002A4D056B0002909B /* ScrumsView.swift */; };
 		EB8E4CFA2A4CCB0B002B4258 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8E4CF92A4CCB0B002B4258 /* Theme.swift */; };
 		EB8E4CFC2A4CCC99002B4258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8E4CFB2A4CCC99002B4258 /* Assets.xcassets */; };
 		EB8E4D012A4CCCFC002B4258 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8E4D002A4CCCFC002B4258 /* Preview Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB6052002A4D056B0002909B /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 		EB8E4CF92A4CCB0B002B4258 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		EB8E4CFB2A4CCC99002B4258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/CreatingACardView/StartingProject/Scrumdinger/Assets.xcassets; sourceTree = "<group>"; };
 		EB8E4D002A4CCCFC002B4258 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -44,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				EB8E4CF92A4CCB0B002B4258 /* Theme.swift */,
-				EB8E4D062A4CD53F002B4258 /* TrailingIconLabelStyle.swift */,
 				EB8E4D022A4CCDA9002B4258 /* DailyScrum.swift */,
 			);
 			path = Models;
@@ -56,6 +57,17 @@
 				EB8E4D002A4CCCFC002B4258 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EB8E4D082A4D04E1002B4258 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EB8E4D062A4CD53F002B4258 /* TrailingIconLabelStyle.swift */,
+				EB8E4D042A4CCF3A002B4258 /* CardView.swift */,
+				EBE7ED0E2A4CB3A500044F2B /* MeetingView.swift */,
+				EB6052002A4D056B0002909B /* ScrumsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EBE7ED002A4CB3A500044F2B = {
@@ -79,8 +91,7 @@
 			children = (
 				EB8E4CF82A4CCAE9002B4258 /* Models */,
 				EBE7ED0C2A4CB3A500044F2B /* ScrumdingerApp.swift */,
-				EB8E4D042A4CCF3A002B4258 /* CardView.swift */,
-				EBE7ED0E2A4CB3A500044F2B /* MeetingView.swift */,
+				EB8E4D082A4D04E1002B4258 /* Views */,
 				EB8E4CFB2A4CCC99002B4258 /* Assets.xcassets */,
 				EB8E4CFF2A4CCCFC002B4258 /* Preview Content */,
 			);
@@ -160,6 +171,7 @@
 				EB8E4D032A4CCDA9002B4258 /* DailyScrum.swift in Sources */,
 				EB8E4D072A4CD53F002B4258 /* TrailingIconLabelStyle.swift in Sources */,
 				EB8E4CFA2A4CCB0B002B4258 /* Theme.swift in Sources */,
+				EB6052012A4D056B0002909B /* ScrumsView.swift in Sources */,
 				EBE7ED0F2A4CB3A500044F2B /* MeetingView.swift in Sources */,
 				EBE7ED0D2A4CB3A500044F2B /* ScrumdingerApp.swift in Sources */,
 				EB8E4D052A4CCF3A002B4258 /* CardView.swift in Sources */,
