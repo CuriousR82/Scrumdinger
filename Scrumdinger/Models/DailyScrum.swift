@@ -13,6 +13,14 @@ struct DailyScrum: Identifiable {
     var title: String
     var attendees: [Attendee]
     var lengthInMinutes: Int
+    var lengthInMinutesAsDouble: Double {
+        get {
+            Double(lengthInMinutes)
+        }
+        set {
+            lengthInMinutes = Int(newValue)
+        }
+    }
     var theme: Theme
     
     // Add an initializer that assigns a default value to the id property.
@@ -49,5 +57,9 @@ extension DailyScrum {
             DailyScrum(title: "App Dev", attendees: ["Katie", "Gray", "Euna", "Luis", "Darla"], lengthInMinutes: 5, theme: .orange),
             DailyScrum(title: "Web Dev", attendees: ["Chella", "Chris", "Christina", "Eden", "Karla", "Lindsey", "Aga", "Chad", "Jenn", "Sarah"], lengthInMinutes: 5, theme: .poppy)
         ]
+    }
+    
+    static var emptyScrum: DailyScrum {
+        DailyScrum(title: "", attendees: [], lengthInMinutes: 5, theme: .sky)
     }
 }
