@@ -16,7 +16,7 @@ struct DetailView: View {
     var body: some View {
         List {
             Section(header: Text("Meeting Info")) {
-                NavigationLink (destination: MeetingView()) {
+                NavigationLink (destination: MeetingView(scrum: $scrum)) {
                     Label("Start Meeting", systemImage: "timer")
                         .font(.headline)
                         .foregroundColor(.accentColor)
@@ -77,7 +77,7 @@ struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         // Wrap DetailView in a NavigationStack to preview navigation elements on the canvas.
         NavigationStack {
-            DetailView(scrum:  DailyScrum.sampleData[0])
+            DetailView(scrum: .constant(DailyScrum.sampleData[0]))
         }
     }
 }
