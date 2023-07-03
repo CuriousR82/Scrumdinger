@@ -22,6 +22,7 @@ struct DailyScrum: Identifiable {
         }
     }
     var theme: Theme
+    var history: [History] = []
     
     // Add an initializer that assigns a default value to the id property.
     // When you define a default value for a parameter, you can omit that parameter when you call an initializer or function.
