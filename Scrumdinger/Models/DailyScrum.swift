@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DailyScrum: Identifiable {
+struct DailyScrum: Identifiable, Codable {
     // To conform to Identifiable, a model must have a property named id. Your code won’t compile until you add this property.
     let id: UUID
     var title: String
@@ -24,14 +24,9 @@ struct DailyScrum: Identifiable {
     var theme: Theme
     var history: [History] = []
     
-    // Add an initializer that assigns a default value to the id property.
-    // When you define a default value for a parameter, you can omit that parameter when you call an initializer or function.
-    // Initializers like this takes parameters and creates a DailyScrum struct with the parameters.
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id
         self.title = title
-        // This line of code initializes the attendees property of a DailyScrum instance by converting an array of strings into an array of Attendee objects. Each Attendee object is created with a unique identifier (id) and the corresponding name from the attendees array.
-        // $0 refers to the current element being processed in the closure
         self.attendees = attendees.map { Attendee(name: $0)}
         self.lengthInMinutes = lengthInMinutes
         self.theme = theme
@@ -39,7 +34,7 @@ struct DailyScrum: Identifiable {
 }
 
 extension DailyScrum {
-    struct Attendee: Identifiable {
+    struct Attendee: Identifiable, Codable {
         let id: UUID
         var name: String
         
