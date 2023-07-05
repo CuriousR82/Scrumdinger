@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MeetingTimerView: View {
     let speakers: [ScrumTimer.Speaker]
+    let isRecording: Bool
     let theme: Theme
     
     // This code tries to find the first speaker in the speakers array that is not completed (isCompleted is false). If such a speaker is found, it retrieves their name property. If no matching speaker is found or the name is nil, it uses the default value "Someone".
@@ -24,6 +25,10 @@ struct MeetingTimerView: View {
                     Text(currentSpeaker)
                         .font(.title)
                     Text("is speaking")
+                    Image(systemName: isRecording ? "mic" : "mic.slash")
+                        .font(.title)
+                        .padding(.top)
+                        .accessibilityLabel(isRecording ? "with transcription" : "without transcription")
                 }
                 .accessibilityElement(children: .combine)
                 .foregroundStyle(theme.accentColor)
@@ -46,6 +51,6 @@ struct MeetingTimerView_Previews: PreviewProvider {
         [ScrumTimer.Speaker(name: "Bill", isCompleted: true), ScrumTimer.Speaker(name: "Cathy", isCompleted: false)]
     }
     static var previews: some View {
-        MeetingTimerView(speakers: speakers, theme: .yellow)
+        MeetingTimerView(speakers: speakers, isRecording: true, theme: .yellow)
     }
 }
